@@ -1,96 +1,111 @@
-# Crypto Tools by [@Cryptomius](https://twitter.com/cryptomius) 
-Thanks for visiting my crypto tools directory. If you find these helpful please [feel free to tip](#tips)! :-)
+[TOC]
 
 
-## [TradingView watchlist creator (TradingView)](https://github.com/cryptomius/tradingview-top-100)
+# Research / Playground
 
-Need to build a watchlist in TradingView with the top 100 coins/tokens paired against USD or BTC?
+## [Market Maker Simulator](https://github.com/cryptomius/mm-parameter-lab)
 
-This javascript bookmarklet scrapes the [TradingView.com](http://www.tradingview.com) website for coin/token symbols and combines them with your favourite pairings.
+A discrete-time ***\*Avellaneda–Stoikov\**** market-making simulator with a stress-scenario library, operating regime controller, toggleable risk interventions, and a real-time UI for poking the quoter mid-flight.
 
-Link: [TradingView watchlist creator (TradingView) on GitHub.com](https://github.com/cryptomius/tradingview-top-100)
+Built to test how the AS algorithm responds to various regimes (ie crypto vesting oversupply) and interventions with backtesting engine to compute statistical profitability of interventions. 
 
-## [TradingView watchlist creator (CoinMarketCap)](https://github.com/cryptomius/cmc100)
+<kbd>![Market Maker Simulator](https://github.com/cryptomius/mm-parameter-lab/raw/main/docs/snapshot.png)</kbd>
 
-Need to build a watchlist in TradingView with the top 100 coins/tokens paired against USD, USDT, BTC, ETH (and others)?
+Link: [Market Maker Simulator & Parameter Lab on Github.com](https://github.com/cryptomius/mm-parameter-lab)
 
-This javascript bookmarklet scrapes the [CoinMarketCap.com](http://www.coinmarketcap.com) website for coin/token symbols and combines them with your favourite pairings.
+## Volume & Trend Scanner
 
-Link: [TradingView watchlist creator (CoinMarketCap) on GitHub.com](https://github.com/cryptomius/cmc100)
+Prototype built to quickly scan for early volume signals preceding large price movement. The system ingests daily price and volume data from Coingecko API, applies trend, BTC correlation & volume threshold algorithms, and stores locally for fast display of trading shortlist.
 
-## [Bitfinex TradingView watchlist creator](https://github.com/cryptomius/Bitfinex-TradingView-Watchlist)
+Volume threshold detector is a derivative of ATR with multiplier and trend is zig-zag algorithm based (HH, HL).
 
-Need to import the latest Bitfinex pairs into TradingView? 
-This javascript bookmarklet extracts all exchange or margin tradeable pairs from Bitfinex and saves them as a watchlist file you can import into TradingView.
+Other features include exchange-based liquidity snapshots, daily trending coin data, social media sentiment.
 
-Link: [Bitfinex TradingView watchlist creator on GitHub.com](https://github.com/cryptomius/Bitfinex-TradingView-Watchlist)
+<kbd>![Crypto Market Volume Scanner](assets/volume-scanner.jpg)</kbd>
 
-## [Bitfinex Auto-Stop (Node JS)](https://github.com/cryptomius/Bitfinex-Auto-Stop)
+Link: Proprietary system (not public)
 
-This script waits for your specified entry price, enters a trade position, then automatically protects the position with a stop order.
+---
+# Trading Indicators / Signals
 
-Link: [Bitfinex Auto-Stop (Node JS) on GitHub.com](https://github.com/cryptomius/Bitfinex-Auto-Stop)
+## ["Crypto Cradle" ](https://www.tradingview.com/script/dIODLr62-Crypto-Cradle-v6/)
 
-## [Bitfinex Auto-Stop & Target (Node JS)](https://github.com/cryptomius/Bitfinex-oco)
+This is mean reversion trend-trading strategy taught by [@TraderCobb](https://twitter.com/TraderCobb). 
 
-This script waits for your specified entry price (limit, stop, market order), enters the trade position, then automatically protects the position with a stop order and target for 100% to close the position when your stop or target are hit.
+Combines trend, MACD, EMA proximity, and multi-timeframe analysis.
 
-Link: [Bitfinex Auto-Stop (Node JS) on GitHub.com](https://github.com/cryptomius/Bitfinex-oco)
-
-## [Bitfinex Auto-Stop with 1:1 Scale-out (Node JS)](https://github.com/cryptomius/Bitfinex-Auto-Stop-121-Scale-Out)
-
-This script waits for your specified entry price, enters a trade position, then automatically protects your position with a stop order and 1:1 scale-out order.
-
-Link: [Bitfinex Auto-Stop with 1:1 Scale-out on GitHub.com](https://github.com/cryptomius/Bitfinex-Auto-Stop-121-Scale-Out)
-
-# TradingView indicators
-
-### 'Crypto Cradle' trading strategy
-
-My trading success has been largely due to self-discipline and strategies taught by [@TraderCobb](https://twitter.com/TraderCobb) 
-
-His '[Crypto Cradle](https://tinyurl.com/cobb-courses-2019)' and '[Bitcoin Breakout](https://tinyurl.com/cobb-courses-2019)' courses set the foundation for consistent trading success. 
-
-Below are scripts I've written to assist in identifying and automating (alerting) potential trades.
+My closed-source [TradingView indicator](https://www.tradingview.com/script/dIODLr62-Crypto-Cradle-v6/) applies the pre-trade confirmation checklist criteria to highlight entry opportunities. It displays stop, entry & optional scale-out price levels for position size calculation.
 
 <kbd>![Cradle TradingView](https://s3.tradingview.com/c/cNHOAIDP_mid.png)</kbd>
 
-## [Crypto Cradle](https://www.tradingview.com/script/NqzFpfex-Crypto-Cradle-trigger/)
-
-This indicator highlights candles that meet many of the criteria required to take a short/long position. More detail is on the indicator description page.
-
-Link: [Crypto Cradle Trigger on TradingView.com](https://www.tradingview.com/script/NqzFpfex-Crypto-Cradle-trigger/) 
-
-## [Crypto Cradle Trade Assistant](https://www.tradingview.com/script/cNHOAIDP-Crypto-Cradle-Trade-Assistant/)
-
-This is an assistant indicator to help you work out your entry price, trade amount, stop price, 1:1 scale-out price, and potential profit based on using the [Crypto Cradle](https://tinyurl.com/cobb-courses-2019) strategy
-
-Link: [Crypto Cradle Trade Assistant on TradingView.com](https://www.tradingview.com/script/cNHOAIDP-Crypto-Cradle-Trade-Assistant/)
-
-## More indicators
-
-## [Linear Levels](https://www.tradingview.com/script/6zrmtVer-Linear-Levels/)
-
-This indicator allows you to place linear levels on your chart to help plan your trades.
-
-<kbd>![Linear Levels](https://s3.tradingview.com/6/6zrmtVer_mid.png)</kbd>
+Link: [Crypto Cradle Trigger on TradingView.com](https://www.tradingview.com/script/dIODLr62-Crypto-Cradle-v6/) 
 
 
-## [Explosive Potential](https://www.tradingview.com/script/rwBArbXJ-Explosive-Potential/)
+## ["Explosive Potential" ](https://www.tradingview.com/script/rwBArbXJ-Explosive-Potential/)
 
-This indicator looks at times where MACD is within a specified range (very close to 0 values) and price action is very constrained (under 1-5% depending on the coin). Historically price has made a strong move after these conditions.
+This indicator looks at times where MACD is within a specified range (very close to 0 values) and price action is very constrained. Historically price has made a strong move after these conditions.
 
 <kbd>![Explosive Potential](https://s3.tradingview.com/r/rwBArbXJ_mid.png)</kbd>
 
 Link: [Explosive Potential on TradingView.com](https://www.tradingview.com/script/rwBArbXJ-Explosive-Potential/)
 
 ---
-<a name="tips"></a>*Have you found my work helpful? Feel free to send me a tip! :-)*
+# Algorithmic Trading 
 
-**BTC**: 1GdpCvpiK6e5N5u89Dq21jJcqfzJ48zAy2  
-**ETH & ERC20**: 0x13098ad7ac788e0bcd3ed38f04003c0df90ebbc9  
-**ETC**: 0xb0b4efe2ad6d0ddc0d8bd030525e32580e85f0cd  
-**LTC**: LdEu42hZUUSxxZboXGdes1snQfwrR7VWt3  
-**DASH**: XnU3c743iqpros4YQgfsn9Nxq6T9bguH8e  
-**ZEC**: t1gLKiEZP9RyKtHthvYi2Vo97fvJXL7YcMd  
-**BCH**: 1H9dSN6nsoGDCG4GvPgCWRjP765kqJSXYN
+## Uhl MA Crossover Strategy (PineScript, NodeJS)
+
+Strategy implementation of [Alex Glover's](https://www.tradingview.com/script/Hl1Sw0I4-Uhl-MA-Crossover-System/) adaptation of Andreas Uhl moving average formula (professor at Salzburg University). Essentially the algorithm attempts to minimise the frequency of slow vs fast moving average cross-overs during sideways market conditions. 
+
+I converted the indicator into a strategy for backtesting and tested additional signal invalidation layers, loss mitigation, risk management & profit target methodologies.
+
+I ran this strategy live on 4H and 8H candles across several high-liquidity crypto assets (spot for long, quarterly futures or perp futures for short) using segregated CEX sub-accounts. I wrote the infrastructure to calculate the strategy data from CEX API data and perform the trades directly (NodeJS with CCXT).
+
+Monte Carlo simulations were positive, but real-world outcomes showed net sideways profitability so I put the live execution on ice.
+
+<kbd>![UHL MA Crossover Strategy](assets/uhl-strategy.png)</kbd>
+
+Link: Proprietary system (not public)
+
+# Trading Tools (Crypto)
+
+## Lowcap Ease (NodeJS)
+
+Proprietary tool to accumulate and exit large positions in low or itinerant liquidity environments. 
+
+Buys/sells a random (range-bound) amount on a random (range-bound) periodic basis. 
+
+Monitors orderbook and optionally fills large top-of-book orders if directionally aligned (above nominated threshold) to take advantage of itinerant liquidity. 
+
+Reports progress via Telegram. CEX connectivity via CCXT.
+
+<kbd>![Lowcap Ease Parameters](assets/lowcapease-params.png)</kbd>
+<kbd>![Lowcap Ease](assets/lowcapease.png)</kbd>
+
+## [Neutron blockchain bulk-sender](https://github.com/cryptomius/neutron-bulk-sender)
+Written to perform bulk USDC transfers to Neutron blockchain recipients list (CSV).
+
+Requires a Neutron blockchain wallet, RPC address, source wallet mnemonic phrase, and CSV containing destination address & amount pairs. 
+
+The CSV will be updated with the transaction hash of the sent amount, which also avoids duplicate sending if the script gets interrupted.
+
+---
+
+Note: The scripts were written in 2018 an may no longer be compatible with Bitfinex APIs. They're included for portfolio purposes.
+
+## [Bitfinex Auto-Stop](https://github.com/cryptomius/Bitfinex-Auto-Stop)
+
+This script waits for your specified entry price, enters a trade position at your nominated size, then automatically protects the position with a stop order.
+
+Link: [Bitfinex Auto-Stop (Node JS)](https://github.com/cryptomius/Bitfinex-Auto-Stop)
+
+## [Bitfinex Auto-Stop & Target](https://github.com/cryptomius/Bitfinex-oco)
+
+This script waits for your specified entry price (limit, stop, market order), enters the trade position, then automatically protects the position with a stop order and target for 100% to close the position when your stop or target are hit.
+
+Link: [Bitfinex Auto-Stop (Node JS)](https://github.com/cryptomius/Bitfinex-oco)
+
+## [Bitfinex Auto-Stop with 1:1 Scale-out](https://github.com/cryptomius/Bitfinex-Auto-Stop-121-Scale-Out)
+
+This script waits for your specified entry price, enters a trade position, then automatically protects your position with a stop order and 1:1 scale-out order.
+
+Link: [Bitfinex Auto-Stop with 1:1 Scale-out](https://github.com/cryptomius/Bitfinex-Auto-Stop-121-Scale-Out)
