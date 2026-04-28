@@ -56,7 +56,7 @@ A NodeJS + CCXT system for running systematic strategies live across CEX venues 
 
 Calculates strategy data from exchange APIs in real-time, sizes positions, places automated stops and scale-outs, and reconciles live performance against backtested expectations. Uses segregated sub-accounts per asset for isolation. Supports spot longs and quarterly/perpetual futures shorts on high-liquidity crypto assets at 4H and 8H timeframes.
 
-Originally built to run a moving-average crossover strategy live (see Uhl MA Crossover Strategy in the legacy section). 
+Originally built to run a moving-average crossover strategy live (see Uhl MA Crossover Strategy in the legacy section). Monte Carlo backtests were positive but live results diverged after slippage and execution costs, so that strategy was retired. The execution layer itself is the durable artefact.
 
 Link: Proprietary
 
@@ -71,8 +71,6 @@ Earlier work from when I first started trading (2016-2018). Included for complet
 PineScript implementation of [Alex Glover's](https://www.tradingview.com/script/Hl1Sw0I4-Uhl-MA-Crossover-System/) adaptation of Andreas Uhl's moving average formula (professor at Salzburg University). Attempts to reduce noise from slow vs fast MA crossovers during sideways markets.
 
 Backtested with additional signal invalidation, loss mitigation, and risk management methodologies before live deployment. The production execution layer that ran this strategy is described in the [Live Multi-Asset Strategy Execution](#live-multi-asset-strategy-execution) section above. 
-
-Monte Carlo backtests were positive but live results diverged after slippage and execution costs, so that strategy was retired. The execution layer itself is the durable artefact.
 
 ![UHL MA Crossover Strategy](assets/uhl-strategy.png)
 
