@@ -1,4 +1,19 @@
-[TOC]
+## Table of Contents
+
+- [Research / Playground](#research--playground)
+  - [Market Maker Simulator](#market-maker-simulator)
+  - [Volume & Trend Scanner](#volume--trend-scanner)
+- [Trading Indicators / Signals](#trading-indicators--signals)
+  - ["Crypto Cradle"](#crypto-cradle)
+  - ["Explosive Potential"](#explosive-potential)
+- [Algorithmic Trading](#algorithmic-trading)
+  - [Uhl MA Crossover Strategy (PineScript, NodeJS)](#uhl-ma-crossover-strategy-pinescript-nodejs)
+- [Trading Tools (Crypto)](#trading-tools-crypto)
+  - [Lowcap Ease (NodeJS)](#lowcap-ease-nodejs)
+  - [Neutron blockchain bulk-sender](#neutron-blockchain-bulk-sender)
+  - [Bitfinex Auto-Stop](#bitfinex-auto-stop)
+  - [Bitfinex Auto-Stop & Target](#bitfinex-auto-stop--target)
+  - [Bitfinex Auto-Stop with 1:1 Scale-out](#bitfinex-auto-stop-with-11-scale-out)
 
 
 # Research / Playground
