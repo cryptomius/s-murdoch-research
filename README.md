@@ -10,13 +10,13 @@
 
 **[Legacy / Earlier Work](#legacy--earlier-work)**
 
-- **[Studies](#studies)**
-  - [Volume & Trend Scanner](#volume--trend-scanner)
-  - ["Crypto Cradle" study](#crypto-cradle-study)
-  - ["MACD-zero compression" study](#macd-zero-compression-study)
 - **[Algorithmic Trading](#algorithmic-trading)**
   - [Uhl MA Crossover Strategy (PineScript, NodeJS)](#uhl-ma-crossover-strategy-pinescript-nodejs)
-- **[Other Trading Tools (Crypto)](#other-trading-tools-crypto)**
+- **[Studies](#studies)**
+  - [Mean Reversion Compression/Expansion study](#mean-reversion-compressionexpansion-study)
+  - ["MACD-zero compression" study](#macd-zero-compression-study)
+  - [Volume & Trend Scanner](#volume--trend-scanner)
+- **[Other Tools (Crypto)](#other-tools-crypto)**
   - [Neutron blockchain token bulk-sender](#neutron-blockchain-token-bulk-sender)
   - [Bitfinex Auto-Stop with 1:1 Scale-out](#bitfinex-auto-stop-with-11-scale-out)
 
@@ -28,9 +28,9 @@
 
 A discrete-time ***\*Avellaneda–Stoikov\**** market-making simulator with a stress-scenario library, operating regime controller, toggleable risk interventions, and a real-time UI for poking the quoter mid-flight.
 
-Built to test how the AS algorithm responds to various regimes (ie crypto vesting oversupply) and interventions with backtesting engine to compute statistical profitability of interventions. 
+Built to study how the Avellaneda-Stoikov algorithm responds to different market regimes — including crypto-specific stresses like vesting oversupply — and how various risk interventions perform under each. Includes a headless backtesting engine for reproducible analysis.
 
-<kbd>![Market Maker Simulator](https://github.com/cryptomius/mm-parameter-lab/raw/main/docs/snapshot.png)</kbd>
+![Market Maker Simulator](https://github.com/cryptomius/mm-parameter-lab/raw/main/docs/snapshot.png)
 
 Link: [Market Maker Simulator & Parameter Lab on Github.com](https://github.com/cryptomius/mm-parameter-lab)
 
@@ -44,43 +44,15 @@ Implements randomised order sizing and timing to avoid signature-based detection
 
 Used in production to manage systematic liquidations across 200+ low-liquidity tokens with no observable market impact.
 
-<kbd>![Lowcap Ease Parameters](assets/lowcapease-params.png)</kbd>
-<kbd>![Lowcap Ease](assets/lowcapease.png)</kbd>
+![Lowcap Ease Parameters](assets/lowcapease-params.png)
+![Lowcap Ease](assets/lowcapease.png)
 
 Link: Proprietary 
 
 # Legacy / Earlier Work
 
-The below are various 'retail trader' tools I written when I first got into trading (2016-2018).
+Earlier work from when I first started trading (2016-2018). Included for completeness — they reflect the retail-discretionary frameworks I was learning at the time.
 
-## Studies
-
-### Volume & Trend Scanner
-
-Prototype built to quickly scan for early volume signals preceding large price movement. The system ingests daily price and volume data from Coingecko API, applies trend, BTC correlation & volume threshold algorithms, and stores locally for fast display of trading shortlist.
-
-Volume threshold detector is a derivative of ATR with multiplier and trend is zig-zag algorithm based (HH, HL).
-
-Other features include exchange-based liquidity snapshots, daily trending coin data, social media sentiment.
-
-<kbd>![Crypto Market Volume Scanner](assets/volume-scanner.jpg)</kbd>
-
-Link: Proprietary system (not public)
-
-### ["Crypto Cradle" study](https://www.tradingview.com/script/dIODLr62-Crypto-Cradle-v6/)
-
-A study of mean-reverting compression-then-expansion regimes in crypto, with statistical significance testing on historical data.
-
-<kbd>![Cradle TradingView](https://s3.tradingview.com/c/cNHOAIDP_mid.png)</kbd>
-
-
-### ["MACD-zero compression" study](https://www.tradingview.com/script/rwBArbXJ-Explosive-Potential/)
-
-This study isolates when MACD is within a specified range (close to 0) and price action is constrained.
-
-<kbd>![Explosive Potential](https://s3.tradingview.com/r/rwBArbXJ_mid.png)</kbd>
-
----
 ## Algorithmic Trading 
 
 ### Uhl MA Crossover Strategy (PineScript, NodeJS)
@@ -93,11 +65,38 @@ I ran this strategy live on 4H and 8H candles across several high-liquidity cryp
 
 Monte Carlo simulations were positive, but real-world outcomes showed net sideways profitability so I put the live execution on ice.
 
-<kbd>![UHL MA Crossover Strategy](assets/uhl-strategy.png)</kbd>
+![UHL MA Crossover Strategy](assets/uhl-strategy.png)
 
 Link: Proprietary system (not public)
 
-## Other Trading Tools (Crypto)
+## Studies
+
+### [Mean Reversion Compression/Expansion study](https://www.tradingview.com/script/dIODLr62-Crypto-Cradle-v6/)
+
+A study of mean-reverting compression-then-expansion regimes in crypto, with statistical significance testing on historical data.
+
+![Cradle TradingView](https://s3.tradingview.com/c/cNHOAIDP_mid.png)
+
+
+### ["MACD-zero compression" study](https://www.tradingview.com/script/rwBArbXJ-Explosive-Potential/)
+
+This study isolates when MACD is within a specified range (close to 0) and price action is constrained.
+
+![Explosive Potential](https://s3.tradingview.com/r/rwBArbXJ_mid.png)
+
+### Volume & Trend Scanner
+
+Prototype built to quickly scan for early volume signals preceding large price movement. The system ingests daily price and volume data from Coingecko API, applies trend, BTC correlation & volume threshold algorithms, and stores locally for fast display of trading shortlist.
+
+Volume threshold detector is a derivative of ATR with multiplier and trend is zig-zag algorithm based (HH, HL).
+
+Other features include exchange-based liquidity snapshots, daily trending coin data, social media sentiment.
+
+![Crypto Market Volume Scanner](assets/volume-scanner.jpg)
+
+Link: Proprietary system (not public)
+
+## Other Tools (Crypto)
 
 ## [Neutron blockchain token bulk-sender](https://github.com/cryptomius/neutron-bulk-sender)
 Written to perform bulk USDC transfers to Neutron blockchain recipients list (CSV).
@@ -119,4 +118,3 @@ Link: [Bitfinex Auto-Stop with 1:1 Scale-out](https://github.com/cryptomius/Bitf
 # **Let's connect**
 
 **LinkedIn**: https://www.linkedin.com/in/smurdoch/
-**X**: https://x.com/shannon_diy
