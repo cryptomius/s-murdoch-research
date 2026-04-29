@@ -54,7 +54,7 @@ Link: Proprietary
 
 A NodeJS + CCXT system for running systematic strategies live across CEX venues with proper risk controls.
 
-Calculates strategy data from exchange APIs in real-time, sizes positions, places automated stops and scale-outs, and reconciles live performance against backtested expectations. Uses segregated sub-accounts per asset for isolation. Supports spot longs and quarterly/perpetual futures shorts on high-liquidity crypto assets at 4H and 8H timeframes.
+Calculates strategy data from exchange APIs in real-time, opens and closes positions based on strategy, and reconciles live performance against backtested expectations. Uses segregated sub-accounts per asset for isolation. Supports spot longs and quarterly/perpetual futures shorts on high-liquidity crypto assets at the user's nominated timeframes.
 
 Originally built to run a moving-average crossover strategy live (see Uhl MA Crossover Strategy in the legacy section). Monte Carlo backtests were positive but live results diverged after slippage and execution costs, so that strategy was retired. The execution layer itself is the durable artefact.
 
